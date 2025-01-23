@@ -1,0 +1,140 @@
+/* Header Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical centering */
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 70px; /* Set a consistent height for the navbar */
+}
+
+.logo h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.logo span {
+    color: #1e90ff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 25px; /* Maintain button padding */
+    background: #1e90ff;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    display: inline-flex; /* Ensure alignment with flexbox */
+    justify-content: center; /* Center text within the button */
+    align-items: center; /* Center text vertically */
+    height: 40px; /* Set a consistent height */
+}
+
+.name {
+    color: #fff;
+    text-decoration: none;
+}
+
+.name:hover {
+    color: #ffcc00;
+}
+
+.btn:hover {
+    background: #ffcc00;
+    color: #000;
+}
+.burger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+
+/* Media Queries for Header */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 30px;
+        height: auto; /* Allow flexibility for mobile layout */
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially for mobile */
+    }
+
+    .burger {
+        display: block; /* Show burger menu */
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    .logo h2 {
+        font-size: 24px;
+    }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
